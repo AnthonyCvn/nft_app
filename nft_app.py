@@ -7,7 +7,11 @@ import numpy as np
 import streamlit.components.v1 as components  # Import Streamlit
 
 # Render the h1 block, contained in a frame of size 200x200.
-components.html("<script id='mcjs'>!function(c,h,i,m,p){m=c.createElement(h),p=c.getElementsByTagName(h)[0],m.async=1,m.src=i,p.parentNode.insertBefore(m,p)}(document,'script','https://chimpstatic.com/mcjs-connected/js/users/caa5f8f8430da8ccdec49101c/b0fa7a23be31a6aba1cedf0f2.js');</script>", width=200, height=200)
+components.html(
+    """
+    <script id="mcjs">!function(c,h,i,m,p){m=c.createElement(h),p=c.getElementsByTagName(h)[0],m.async=1,m.src=i,p.parentNode.insertBefore(m,p)}(document,"script","https://chimpstatic.com/mcjs-connected/js/users/caa5f8f8430da8ccdec49101c/b0fa7a23be31a6aba1cedf0f2.js");</script>
+    """
+)
 
 
 # Streamlit title and text
