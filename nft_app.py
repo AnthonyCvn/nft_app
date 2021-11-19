@@ -42,7 +42,7 @@ top_merged_df.set_index(['{:0>2d} – '.format(i) for i in range(1, len(top_merg
 # Streamlit title and text
 st.title('Ranking of upcoming NFT sales')
 
-st.header("9th of November 2021")
+st.header("19th of November 2021")
 
 # Plots 20 first NFTs
 st.bar_chart(top_nfts_norm_df.drop(['Exposure score', 'Twitter Profile'], axis=1)[0:20])
@@ -81,7 +81,8 @@ for i in range(1,21): # number of rows in your table! = 2
     col[2].metric('Profile: relative followers', '{:,.0f}'.format(delta_twitter_followers))
 
     # Picture and links
-    st.image(banner_url)
+    if type(banner_url) is str:
+        st.image(banner_url)
     st.write(twitter_description)
     st.write(' :point_right: ', twitter_url)
     st.write(' :point_right: ', website_url)
